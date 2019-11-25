@@ -8,13 +8,23 @@
 //let eight = document.body.querySelector(#eight);
 //let nine = document.body.querySelector(#nine);
 
-document.body.addEventListener("click", event => {
-  if (event.target.nodeName == "DIV") {
-    event.target.textContent= "X";
-   }
- });
- document.body.addEventListener("click", event => {
-   if (event.target.nodeName == "DIV") {
-     event.target.textContent= "O";
+let turn = 0;
+  document.body.addEventListener("click", event => {
+    if (event.target.nodeName == "DIV") {
+
+    if (turn == 0 || turn % 2 == 0){
+
+        event.target.textContent= "X";
+
+        console.log(turn);
 }
+    if (turn == 1 || turn % 2 != 0){
+
+        event.target.textContent= "O";
+        console.log(turn)
+
+    }
+      turn = turn + 1;
+  }
+
 });
