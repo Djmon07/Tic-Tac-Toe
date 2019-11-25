@@ -10,21 +10,24 @@
 
 let turn = 0;
   document.body.addEventListener("click", event => {
+
     if (event.target.nodeName == "DIV") {
 
-    if (turn == 0 || turn % 2 == 0){
+    if (event.target.textContent != "X" && event.target.textContent != "O")
+      turn = turn + 1;
+    }
 
-        event.target.textContent= "X";
+    if (turn == 0 || turn % 2 == 0 && (event.target.textContent != "O" && event.target.textContent != "X")){
 
+        event.target.textContent = "X";
         console.log(turn);
-}
-    if (turn == 1 || turn % 2 != 0){
+        
+    }
 
-        event.target.textContent= "O";
+    if (turn == 1 || turn % 2 != 0 && (event.target.textContent != "X" && event.target.textContent != "O")){
+
+        event.target.textContent = "O";
         console.log(turn)
 
     }
-      turn = turn + 1;
-  }
-
 });
