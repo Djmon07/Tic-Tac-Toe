@@ -1,0 +1,42 @@
+.row{
+  display: flex;
+  height: 200px;
+justify-content: center;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
+  width: 30%;
+}
+
+#one {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#two{
+  border-bottom: 1px solid black;
+}
+
+#three{
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#five{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#seven{
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#eight{
+  border-top: 1px solid black;
+}
+
+#nine{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
