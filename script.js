@@ -9,22 +9,22 @@
 //let nine = document.body.querySelector(#nine);
 
 let turn = 0;
-  document.body.addEventListener("click", event => {
-    if (event.target.nodeName == "DIV") {
+document.body.addEventListener("click", event => {
+  if (event.target.nodeName == "DIV") {
 
-    if (turn == 0 || turn % 2 == 0){
+  if (turn == 0 || turn % 2 == 0){
 
-        event.target.textContent= "X";
+      event.target.textContent= "X";
 
-        console.log(turn);
+      console.log(turn);
 }
-    if (turn == 1 || turn % 2 != 0){
+  if (turn == 1 || turn % 2 != 0){
 
-        event.target.textContent= "O";
-        console.log(turn)
+      event.target.textContent= "O";
+      console.log(turn)
 
-    }
-      turn = turn + 1;
   }
+    turn = turn + 1;
+}
 
 });
