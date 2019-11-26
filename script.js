@@ -12,7 +12,7 @@ const cells = {
 let result = 0;
 
 let turn = 0;
-  document.body.addEventListener("click", event => {
+  document.body.addEventListener("click", click = event => {
 
 
 
@@ -37,7 +37,6 @@ let turn = 0;
     }
   }
 
-
   if (cells.one.textContent == "X"){
     if ((cells.seven.textContent == "X" && cells.four.textContent == "X") || (cells.three.textContent == "X" && cells.two.textContent == "X")){
       result++;
@@ -61,14 +60,14 @@ let turn = 0;
 
 if (cells.one.textContent == "O"){
   if ((cells.seven.textContent == "O" && cells.four.textContent == "O") || (cells.three.textContent == "O" && cells.two.textContent == "O")){
-    result++;
+    result--;
     }
   }
 
 if (cells.nine.textContent == "O"){
 
   if ((cells.three.textContent == "O" && cells.six.textContent == "O") || (cells.seven.textContent == "O" && cells.eight.textContent == "O")){
-    result++;
+    result--;
     }
   }
 
@@ -76,11 +75,19 @@ if (cells.five.textContent == "O"){
 
   if (((cells.one.textContent == "O" && cells.nine.textContent == "O") || (cells.three.textContent == "O" && cells.seven.textContent == "O")) ||
      ((cells.two.textContent == "O" && cells.eight.textContent == "O") || (cells.four.textContent == "O" && cells.six.textContent == "O"))) {
-    result++;
+    result--;
   }
 }
-if (result == 1){
-
+if (result == 1 || result == -1){
+  document.body.removeEventListener("click", click);
+    if (result == 1){
+    let x = document.body.querySelector("#won");
+    x.textContent = "X Won!";
+    }
+    if (result == -1){
+    let o = document.body.querySelector("#won");
+    o.textContent = "O Won!"
+    }
 }
 
 
