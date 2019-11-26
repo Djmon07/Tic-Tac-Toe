@@ -12,35 +12,22 @@
   align-content: center;
 }
 
-#one {
-  border-right: 1px solid black;
+#one, #two, #three{
   border-bottom: 1px solid black;
 }
 
-#two{
-  border-bottom: 1px solid black;
-}
-
-#three{
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-#five{
-  border-left: 1px solid black;
+#one, #five, #seven{
   border-right: 1px solid black;
 }
 
-#seven{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-
-#eight{
-  border-top: 1px solid black;
-}
-
-#nine{
-  border-top: 1px solid black;
+#three, #five, #nine{
   border-left: 1px solid black;
+}
+
+#nine, #eight, #seven {
+  border-top: 1px solid black;
+}
+
+button{
+  font-size: 30px;
 }
