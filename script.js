@@ -9,13 +9,16 @@ const cells = {
     eight: document.body.querySelector("#eight"),
     nine: document.body.querySelector("#nine"),
 };
+document.body.addEventListener("click", click = event => {
+if (event.target.nodeName == "BUTTON") {
+  window.location.reload(true);
+}
+});
+
 let result = 0;
 
 let turn = 0;
   document.body.addEventListener("click", click = event => {
-
-
-
     if (event.target.nodeName == "DIV") {
 
     if (event.target.textContent != "X" && event.target.textContent != "O"){
@@ -89,7 +92,4 @@ if (result == 1 || result == -1){
     o.textContent = "O Won!"
     }
 }
-
-
-
   });
