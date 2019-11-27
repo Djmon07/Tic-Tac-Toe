@@ -2,36 +2,6 @@
   padding: 0;
   margin: 0;
 }
-.row{
-  display: flex;
-  height: 200px;
-  justify-content: center;
-  padding: 0 10% 0 10%;
-}
-
-#one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
-  display: flex;
-  width: 33.33%;
-  font-size: 5em;
-  justify-content: center;
-  align-content: center;
-}
-
-#one, #two, #three{
-  border-bottom: 1px solid black;
-}
-
-#one, #five, #seven{
-  border-right: 1px solid black;
-}
-
-#three, #five, #nine{
-  border-left: 1px solid black;
-}
-
-#nine, #eight, #seven {
-  border-top: 1px solid black;
-}
 
 button{
   font-size: 30px;
@@ -40,7 +10,49 @@ button{
 
 p{
   display: flex;
-  font-size: 30px;
+  font-size: 40px;
   margin: 10px;
   justify-content: center;
+  color: #3A4247;
+}
+body{
+  background-color: #E9F7FF;
+}
+
+/** Grid **/
+ol{
+  margin-top: 2em;
+}
+
+.row{
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  padding: 0 10% 0 10%;
+}
+
+#one, #two, #three, #four, #five,
+#six, #seven, #eight, #nine{
+  display: flex;
+  width: 33.33%;
+  font-size: 10em;
+  color: #3A4247;
+  justify-content: center;
+  align-items: center;
+}
+
+#one, #two, #three{
+  border-bottom: .1em solid #3A4247;
+}
+
+#one, #five, #seven{
+  border-right: .1em solid #3A4247;
+}
+
+#three, #five, #nine{
+  border-left: .1em solid #3A4247;
+}
+
+#nine, #eight, #seven {
+  border-top: .1em solid #3A4247;
 }
